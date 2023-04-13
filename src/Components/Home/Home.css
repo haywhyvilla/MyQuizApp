@@ -1,0 +1,59 @@
+.section-home {
+  height: 100vh;
+
+  margin: 0px 280px;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px auto;
+}
+
+.header-flex h1 {
+  font-family: "Rubik" sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+.header-flex a {
+  background-color: #000;
+  color: #ffffff;
+  padding: 1rem 2.5rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  border-radius: 10px;
+  text-decoration: none;
+  text-decoration-line: none;
+}
+
+.text {
+  text-align: center;
+  margin: 140px auto;
+}
+
+.text h2 {
+  font-family: "Rubik" sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 6.6rem;
+  line-height: 91px;
+}
+
+.text p {
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 151.52%;
+  color: #686868;
+  margin-bottom: 80px;
+}
+
+.text a {
+  background-color: #000;
+  color: #ffffff;
+  padding: 1rem 2.5rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  border-radius: 10px;
+  text-decoration: none;
+}

@@ -1,0 +1,12 @@
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  margin: 0px 20px;
+}
+
+.options p {
+  background-color: #686868;
+  font-size: 2rem;
+  padding: 0px 20px;
+}

@@ -1,0 +1,75 @@
+.position {
+  height: 100vh;
+  background-color: #a8c7fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.form h1 {
+  font-family: "Rubik" sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+
+.form p {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 151.52%;
+  color: #686868;
+  margin-bottom: 30px;
+}
+
+.contact-form input {
+  width: 465px;
+  height: 50px;
+  border: 2px solid #686868;
+  background-color: inherit;
+  padding: 5px 8px 5px 25px;
+  margin-bottom: 24px;
+  color: #686868;
+  outline: none;
+  border-radius: 10px;
+}
+
+.contact-form input::placeholder {
+  color: #686868;
+  font-family: "League Spartan";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 18px;
+  text-align: center;
+}
+
+.submit {
+  display: block;
+  background-color: #000;
+  color: #ffffff;
+  width: 200px;
+  padding: 1rem 2.5rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  border-radius: 10px;
+  text-decoration: none;
+  margin: 20px auto;
+}
+
+textarea {
+  border: 2px solid #686868;
+  background-color: inherit;
+  outline: none;
+  border-radius: 10px;
+}
+
+textarea::placeholder {
+  color: #686868;
+  font-family: "League Spartan";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 18px;
+  text-align: center;
+}

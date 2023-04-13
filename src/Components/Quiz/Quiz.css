@@ -1,0 +1,118 @@
+.section-quiz {
+  margin: -50px auto;
+  background-color: #a8c7fa;
+  width: 100vw;
+}
+
+.quiz-section h1 {
+  text-align: center;
+  /* color: #686868; */
+  font-size: 3rem;
+}
+
+.quiz-centre {
+  margin: 0px auto;
+  width: 800px;
+  height: 800px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+.quiz-centre h2 {
+  text-align: center;
+  background-color: #d6dfed;
+  font-size: 2rem;
+}
+
+.Quiz-info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Quiz-info button {
+  width: 200px;
+  height: 50px;
+  border: none;
+  font-size: 2rem;
+}
+
+.question-field {
+  margin: 20px;
+  width: 750px;
+  height: 220px;
+  border: 1px solid #b6b5b5;
+  background-color: #d6dfed;
+}
+
+.question {
+  margin-top: 10px;
+}
+
+.question input {
+  margin: 0px 10px;
+  width: 96.5%;
+  height: 60px;
+  outline: none;
+}
+
+.answer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0px 10px;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid #b6b5b5;
+  border-radius: 5px;
+}
+
+.cta svg {
+  color: #ffffff;
+  font-size: 2rem;
+  margin: 3px 8px;
+}
+
+.cta input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  height: 5rem;
+  outline: none;
+}
+
+.add-and-delete-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  gap: 100px;
+}
+
+.add-and-delete-button button {
+  background-color: #000;
+  color: #ffffff;
+  width: 300px;
+  padding: 1rem 2.5rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  border: 1px solid #686868;
+  border-radius: 5px;
+}
+
+.add-and-delete-button svg {
+  color: #ffffff;
+}
+
+.save button {
+  background-color: #000;
+  color: #ffffff;
+  padding: 1rem 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  border: 1px solid #686868;
+  border-radius: 5px;
+  margin: 10px auto;
+}

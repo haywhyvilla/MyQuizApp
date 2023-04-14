@@ -24,7 +24,6 @@ const Form = () => {
         Timelimit: timeLimit,
         point: points,
       });
-
       navigate("/Quiz");
     } catch (err) {
       console.error(err);

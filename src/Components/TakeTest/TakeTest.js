@@ -4,6 +4,7 @@ import "./TakeTest.css";
 import { Link } from "react-router-dom";
 import { db } from "../Config/FirebaseConfig";
 import { getDocs, collection } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 const TakeTest = () => {
   const [currQuestion, setCurrQuestion] = useState(0);
@@ -12,6 +13,7 @@ const TakeTest = () => {
   const [quizState, setQuizState] = useState("");
   const [questionList, setQuestionList] = useState([]);
   const questionCollectionRef = collection(db, "question-answer");
+  const navigate = useNavigate();
 
   const getQuestionList = async () => {
     try {
@@ -44,6 +46,11 @@ const TakeTest = () => {
       setScore(score + 1);
     }
     setQuizState("endquiz");
+  };
+
+  const restartQuiz = () => {
+    setScore(0);
+    navigate("/Quiz");
   };
   return (
     <>
@@ -88,6 +95,15 @@ const TakeTest = () => {
                     Next Question
                   </button>
                 )}
+              </div>
+              <div className="endscreen">
+                <h1>Your Score</h1>
+                <h3>
+                  {score} / {questionList.length}
+                </h3>
+                <button className="submit" onClick={restartQuiz}>
+                  Restart Quiz
+                </button>
               </div>
             </div>
           </div>

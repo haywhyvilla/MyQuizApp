@@ -2,17 +2,14 @@ import React, { useEffect, useState } from "react";
 import "./TakeTest.css";
 
 import { Link } from "react-router-dom";
-import { FcAnswers, FcQuestions } from "react-icons/fc";
 import { db } from "../Config/FirebaseConfig";
-import {
-  getDocs,
-  collection,
-  deleteDoc,
-  doc,
-  addDoc,
-} from "firebase/firestore";
+import { getDocs, collection } from "firebase/firestore";
 
 const TakeTest = () => {
+  const [currQuestion, setCurrQuestion] = useState(0);
+  const [optionChosen, setOptionChosen] = useState("");
+  const [score, setScore] = useState(0);
+  const [quizState, setQuizState] = useState("");
   const [questionList, setQuestionList] = useState([]);
   const questionCollectionRef = collection(db, "question-answer");
 
@@ -33,6 +30,21 @@ const TakeTest = () => {
   useEffect(() => {
     getQuestionList();
   }, []);
+
+  const nextQuestion = () => {
+    if (questionList[currQuestion].correct == optionChosen) {
+      setScore(score + 1);
+    }
+
+    setCurrQuestion(currQuestion + 1);
+  };
+
+  const finishQuiz = () => {
+    if (questionList[currQuestion].correct == optionChosen) {
+      setScore(score + 1);
+    }
+    setQuizState("endquiz");
+  };
   return (
     <>
       <div className="section-quiz">
@@ -46,17 +58,37 @@ const TakeTest = () => {
             <div className="quiz-centre">
               <h2>Quiz Questions</h2>
 
-              {questionList.map((question) => (
-                <div className="question-field">
-                  <h1>{question.question}?</h1>
-                  <div className="options">
-                    <p>1.{question.answer1}</p>
-                    <p>2.{question.answer2}</p>
-                    <p>3.{question.answer3}</p>
-                    <p>4.{question.answer4}</p>
+              <div className="question-field">
+                {questionList[0] != undefined && (
+                  <div className="question-field">
+                    <h1>{questionList[currQuestion].question}?</h1>
+                    <div className="options">
+                      <button onClick={() => setOptionChosen("1")}>
+                        1.{questionList[currQuestion].answer1}
+                      </button>
+                      <button onClick={() => setOptionChosen("2")}>
+                        2.{questionList[currQuestion].answer2}
+                      </button>
+                      <button onClick={() => setOptionChosen("3")}>
+                        3.{questionList[currQuestion].answer3}
+                      </button>
+                      <button onClick={() => setOptionChosen("4")}>
+                        4.{questionList[currQuestion].answer4}
+                      </button>
+                    </div>
                   </div>
-                </div>
-              ))}
+                )}
+
+                {currQuestion == questionList.length - 1 ? (
+                  <button className="submit" onClick={finishQuiz}>
+                    Finish Quiz
+                  </button>
+                ) : (
+                  <button className="submit" onClick={nextQuestion}>
+                    Next Question
+                  </button>
+                )}
+              </div>
             </div>
           </div>
         </div>

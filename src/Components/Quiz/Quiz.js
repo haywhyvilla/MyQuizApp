@@ -58,7 +58,10 @@ const Quiz = () => {
     }
   };
 
-  const deleteQuiz = async () => {};
+  const deleteQuiz = async () => {
+    const quizDoc = doc(db, "question-answer");
+    await deleteDoc(quizDoc);
+  };
 
   useEffect(() => {
     getQuizList();

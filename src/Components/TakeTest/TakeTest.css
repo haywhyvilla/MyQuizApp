@@ -5,8 +5,15 @@
   margin: 0px 20px;
 }
 
-.options p {
+.options button {
   background-color: #686868;
   font-size: 2rem;
   padding: 0px 20px;
+  margin: 20px 0px;
+  cursor: pointer;
+}
+
+.options button:hover {
+  background-color: #000;
+  color: #fff;
 }

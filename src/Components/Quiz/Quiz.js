@@ -81,7 +81,7 @@ const Quiz = () => {
             <div className="quiz-centre">
               <h2>Quiz Question</h2>
               <div className="Quiz-info">
-                {quizList[0] != undefined && (
+                {quizList[0] !== undefined && (
                   <div>
                     <button>{quizList[0].Quizdesciption}</button>
                     <button>{quizList[0].Quizname}</button>

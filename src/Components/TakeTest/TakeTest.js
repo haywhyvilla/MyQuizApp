@@ -10,7 +10,6 @@ const TakeTest = () => {
   const [currQuestion, setCurrQuestion] = useState(0);
   const [optionChosen, setOptionChosen] = useState("");
   const [score, setScore] = useState(0);
-  const [quizState, setQuizState] = useState("");
   const [questionList, setQuestionList] = useState([]);
   const questionCollectionRef = collection(db, "question-answer");
   const navigate = useNavigate();
@@ -34,7 +33,7 @@ const TakeTest = () => {
   }, []);
 
   const nextQuestion = () => {
-    if (questionList[currQuestion].correct == optionChosen) {
+    if (questionList[currQuestion].correct === optionChosen) {
       setScore(score + 1);
     }
 
@@ -42,10 +41,9 @@ const TakeTest = () => {
   };
 
   const finishQuiz = () => {
-    if (questionList[currQuestion].correct == optionChosen) {
+    if (questionList[currQuestion].correct === optionChosen) {
       setScore(score + 1);
     }
-    setQuizState("endquiz");
   };
 
   const restartQuiz = () => {

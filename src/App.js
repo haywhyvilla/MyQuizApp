@@ -4,10 +4,8 @@ import Home from "./Components/Home/Home";
 import Form from "./Components/Form/Form";
 import Quiz from "./Components/Quiz/Quiz";
 import TakeTake from "./Components/TakeTest/TakeTest";
-import { useState } from "react";
 
 function App() {
-
   return (
     <BrowserRouter>
       <div className="App"></div>
